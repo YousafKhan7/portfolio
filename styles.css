@@ -265,42 +265,6 @@
     height: auto;
   }
   
-  /* Laptop Section */
-  .laptop-section {
-    background-color: #0a0225;
-    color: white;
-    padding: 4rem 0;
-  }
-  
-  .laptop-content {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    align-items: center;
-  }
-  
-  @media (min-width: 768px) {
-    .laptop-content {
-      grid-template-columns: 1fr 1fr;
-    }
-  }
-  
-  .laptop-text h2 {
-    font-size: 2rem;
-    font-weight: 300;
-    margin-bottom: 1.5rem;
-  }
-  
-  .laptop-text p {
-    color: #d1d5db;
-    margin-bottom: 1rem;
-  }
-  
-  .laptop-image img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-  }
   
   /* Curved Transition Bottom */
   .curved-transition-bottom {
@@ -347,3 +311,57 @@
   .hidden {
     display: none;
   }
+
+/* Technologies Section */
+.technologies-section {
+  background-color: #0a0225;
+  color: white;
+  padding: 4rem 0;
+}
+
+.technologies-section h2 {
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.tech-subtitle {
+  color: #d1d5db;
+  margin-bottom: 2.5rem;
+  max-width: 800px;
+}
+
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.tech-item {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background-color 0.2s;
+}
+
+.tech-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.tech-icon {
+  font-weight: bold;
+  font-size: 0.9rem;
+  display: inline-block;
+  min-width: 24px;
+  text-align: center;
+}
+
+.tech-more {
+  text-align: center;
+  color: #d1d5db;
+  font-style: italic;
+}
