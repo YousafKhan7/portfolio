@@ -1,0 +1,349 @@
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.5;
+    color: #333;
+    background-color: white;
+  }
+  
+  .min-h-screen {
+    min-height: 100vh;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  .relative {
+    position: relative;
+  }
+  
+  .z-10 {
+    z-index: 10;
+  }
+  
+  /* Hero Section */
+  .hero-section {
+    background-color: #1a1a1a;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 2rem;
+  }
+  
+  /* Gold accent borders */
+  .gold-left-border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6rem;
+    height: 100%;
+    background: linear-gradient(to bottom, #c9b45c, #8a7a3b);
+    opacity: 0.5;
+    z-index: 0;
+  }
+  
+  .gold-bottom-border {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 6rem;
+    background: linear-gradient(to left, #c9b45c, #8a7a3b);
+    opacity: 0.5;
+    z-index: 0;
+  }
+  
+  /* Header */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6rem;
+  }
+  
+  .logo {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 0.375rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .logo span {
+    color: black;
+    font-weight: bold;
+    font-size: 1.25rem;
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .icon {
+    color: #d1d5db;
+    transition: color 0.2s;
+  }
+  
+  .icon:hover {
+    color: white;
+  }
+  
+  /* Content layout */
+  .content-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4rem;
+    padding-bottom: 6rem;
+  }
+  
+  @media (min-width: 1024px) {
+    .content-wrapper {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  /* Welcome section */
+  .welcome h1 {
+    font-size: 4.5rem;
+    font-weight: 300;
+    letter-spacing: -0.025em;
+    margin-bottom: 2rem;
+  }
+  
+  .intro {
+    border-left: 4px solid #c9b45c;
+    padding-left: 1rem;
+  }
+  
+  .intro p {
+    color: #d1d5db;
+    margin-bottom: 1rem;
+  }
+  
+  /* Projects section */
+  .projects h2 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    letter-spacing: 0.025em;
+    margin-bottom: 2rem;
+  }
+  
+  .project-list {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .project {
+    border-bottom: 1px solid #c9b45c;
+    padding: 0.75rem 0;
+    transition: background-color 0.2s;
+    cursor: pointer;
+    font-size: 1.125rem;
+    color: white;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .project:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+  
+  /* My Work section */
+  .work-section {
+    background-color: white;
+    color: #1a1a1a;
+    padding: 4rem 0;
+  }
+  
+  .work-section h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+  }
+  
+  .section-subtitle {
+    text-align: center;
+    color: #4b5563;
+    margin-bottom: 4rem;
+  }
+  
+  .project-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  @media (min-width: 768px) {
+    .project-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .project-grid {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+  
+  .project-card {
+    background-color: #f9fafb;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .project-card:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .project-image {
+    height: 12rem;
+    overflow: hidden;
+  }
+  
+  .project-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .project-content {
+    padding: 1.5rem;
+  }
+  
+  .project-content h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+  }
+  
+  .project-content p {
+    color: #4b5563;
+    margin-bottom: 1rem;
+    text-align: left;
+  }
+  
+  .project-links {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 1rem;
+  }
+  
+  .project-links a {
+    color: #4b5563;
+    transition: color 0.2s;
+  }
+  
+  .project-links a:hover {
+    color: #1a1a1a;
+  }
+  
+  /* Curved Transition */
+  .curved-transition {
+    background-color: white;
+    line-height: 0;
+  }
+  
+  .curved-transition svg {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Laptop Section */
+  .laptop-section {
+    background-color: #0a0225;
+    color: white;
+    padding: 4rem 0;
+  }
+  
+  .laptop-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    align-items: center;
+  }
+  
+  @media (min-width: 768px) {
+    .laptop-content {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  .laptop-text h2 {
+    font-size: 2rem;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+  }
+  
+  .laptop-text p {
+    color: #d1d5db;
+    margin-bottom: 1rem;
+  }
+  
+  .laptop-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  /* Curved Transition Bottom */
+  .curved-transition-bottom {
+    background-color: #0a0225;
+    line-height: 0;
+  }
+  
+  .curved-transition-bottom svg {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: white;
+    padding: 2rem 0;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .footer-content p {
+    color: #4b5563;
+  }
+  
+  .footer-links {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .footer-links a {
+    color: #4b5563;
+    transition: color 0.2s;
+  }
+  
+  .footer-links a:hover {
+    color: #1a1a1a;
+  }
+  
+  /* Utility classes */
+  .hidden {
+    display: none;
+  }
